@@ -1,0 +1,196 @@
+\documentclass[11.5pt,a4paper]{article}
+
+% ---------- Packages ----------
+\usepackage[margin=1in]{geometry}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[table]{xcolor}
+\usepackage{hyperref}
+\usepackage{tabularx}
+\usepackage{parskip}
+\usepackage{needspace}
+\usepackage{setspace}
+\usepackage{array}
+
+% ---------- Fonts ----------
+\setmainfont{TeX Gyre Pagella}
+\newfontfamily\headingfont{TeX Gyre Heros}
+
+% ---------- Colors ----------
+\definecolor{headcolor}{RGB}{20,20,20}
+\definecolor{rule}{RGB}{190,190,190}
+\definecolor{subtext}{RGB}{60,60,60}
+\definecolor{rowshade}{RGB}{244,244,244}
+
+% ---------- Line spacing ----------
+\setstretch{1.12}
+
+% ---------- Hyperlinks (all black, no colored links) ----------
+\hypersetup{
+    colorlinks=true,
+    urlcolor=black,
+    linkcolor=black
+}
+
+% ---------- Section formatting ----------
+\titleformat{\section}
+  {\headingfont\large\bfseries\color{headcolor}}
+  {}{0em}{}
+  [{\vspace{2pt}\titlerule[0.8pt]}]
+\titlespacing{\section}{0pt}{20pt}{10pt}
+
+% ---------- List formatting ----------
+\setlist[itemize]{leftmargin=1.2em, itemsep=5pt, topsep=4pt, parsep=0pt}
+
+% ---------- Custom commands ----------
+\newcommand{\eduentry}[3]{%
+  \noindent\textbf{#1} \hfill \textcolor{subtext}{#3}\\
+  #2\par\vspace{4pt}
+}
+
+\newcommand{\projectitem}[2]{%
+  \noindent\textbf{#1} \hfill \textcolor{subtext}{\href{#2}{GitHub Repository}}\par
+}
+
+\pagestyle{empty}
+
+\begin{document}
+
+% ---------------- Header ----------------
+\begin{center}
+    {\headingfont\Huge \bfseries Shahidul Haque Shaheen}\\[10pt]
+    {\normalsize
+      Dhaka, Bangladesh \quad $\vert$ \quad
+      (+880) 1705-157794 \quad $\vert$ \quad
+      \href{mailto:shahidul.haque.shaheen@gmail.com}{shahidul.haque.shaheen@gmail.com} \\[5pt]
+      \href{https://github.com/ShahidulHaqueShaheeen}{github.com/ShahidulHaqueShaheeen} \quad $\vert$ \quad
+      \href{https://linkedin.com/in/shahidul-haque-shaheen}{linkedin.com/in/shahidul-haque-shaheen}
+    }
+\end{center}
+
+\vspace{6pt}
+
+% ---------------- Profile ----------------
+\section*{Profile}
+
+I am passionate about Data Science, with two years of learning and practical experience. I have strong programming skills and enjoy solving data problems. My dedication to learning helps me constantly improve my abilities and understanding in this field. I am hardworking, determined, and always eager to grow, seeking opportunities to expand my knowledge and make meaningful contributions in Data Science.
+
+% ---------------- Education ----------------
+\section*{Education}
+
+\eduentry{BRAC University --- B.Sc. in Computer Science and Engineering}{CGPA: 3.58/4.00}{Fall 2019 -- Fall 2023}
+\textit{Relevant Courses:} Data Structures, Algorithms, Database Systems, Artificial Intelligence, Neural Networks, Mathematics for Machine Learning and Signal Processing, Machine Learning, Software Engineering.
+
+% ---------------- Skills Summary ----------------
+\section*{Skills Summary}
+\rowcolors{1}{rowshade}{white}
+\renewcommand{\arraystretch}{1.6}
+\noindent\begin{tabularx}{\textwidth}{@{\hspace{4pt}}>{\bfseries\raggedright\arraybackslash}p{3.6cm} @{\hspace{6pt}}X@{\hspace{4pt}}}
+Programming Languages & Python, SQL, Java, HTML, CSS, C, C++ \\
+Python Libraries & NumPy, Pandas, Matplotlib, Seaborn, Scikit-learn, TensorFlow, Keras, NLTK \\
+Machine Learning & Supervised Learning (Linear Regression, Logistic Regression, Na\"ive Bayes, Decision Trees, Polynomial Regression, Regularization, Gradient Descent); Unsupervised Learning (K-Means Clustering, PCA) \\
+Deep Learning & Artificial Neural Networks (ANN), Convolutional Neural Networks (CNN), Recurrent Neural Networks (RNN), Long Short-Term Memory (LSTM) \\
+Natural Language Processing & Text Preprocessing, Tokenization, Sentiment Analysis \\
+Feature Engineering & Feature Scaling (Normalization, Standardization), Encoding (One-Hot, Label, Target), Feature Selection (Mutual Information), Dimensionality Reduction (PCA, t-SNE), Handling Missing Data, Outlier Detection \\
+Software & Microsoft Power BI, XAMPP, MySQL Workbench \\
+Office Applications & Excel/Sheets, Word/Docs, PowerPoint/Slides, LaTeX \\
+Soft Skills & Organizing, Collaborating, Teaching, Writing \\
+\end{tabularx}
+\vspace{4pt}
+
+% ---------------- Notable Projects ----------------
+\needspace{10\baselineskip}
+\section*{Notable Projects}
+
+\needspace{6\baselineskip}
+\projectitem{Real Estate Price Prediction using Data Science}{https://github.com/ShahidulHaqueShaheeen/Real_Estate_Price_Prediction.git}
+\begin{itemize}
+    \item Developed a predictive model to estimate real estate prices based on historical data
+    \item Used Python with Pandas, NumPy, and Scikit-Learn for data preprocessing and model building
+    \item Implemented regression algorithms like Linear Regression and DecisionTreeRegressor
+    \item Evaluated model performance using Cross Validation and GridSearchCV
+\end{itemize}
+
+\vspace{10pt}
+\needspace{6\baselineskip}
+\projectitem{Spam Message or Email Detector using Machine Learning}{https://github.com/ShahidulHaqueShaheeen/Spam_MessageOrMail_Detector.git}
+\begin{itemize}
+    \item Built a classifier to detect spam messages and emails with high precision
+    \item Applied NLP techniques like tokenization and TF-IDF vectorization
+    \item Used Python with Scikit-Learn to train models, including Na\"ive Bayes
+    \item Evaluated model performance using accuracy, precision, and recall
+\end{itemize}
+
+\vspace{10pt}
+\needspace{6\baselineskip}
+\projectitem{SQL Case Study on Data Science Job Salaries}{https://github.com/ShahidulHaqueShaheeen/SQL-Case-Studies.git}
+\begin{itemize}
+    \item Conducted SQL-based case studies on real-life datasets to analyze job salaries in data science
+    \item Used SQL queries to extract insights and answer business-related questions
+    \item Organized the case study into structured components: Question, Query, and Output
+\end{itemize}
+
+\vspace{10pt}
+\needspace{6\baselineskip}
+\projectitem{Machine Learning Algorithm Implementations}{https://github.com/ShahidulHaqueShaheeen/ML_Algorithms.git}
+\begin{itemize}
+    \item Implemented fundamental ML algorithms like Gradient Descent, Linear Regression, and Logistic Regression
+    \item Explored Polynomial Regression and Regularization techniques (Lasso, Ridge) to prevent overfitting
+    \item Used NumPy, Pandas, and Scikit-Learn for model building and experimentation
+    \item Provided clear explanations and code implementations for understanding core ML principles
+\end{itemize}
+
+\vspace{10pt}
+\needspace{6\baselineskip}
+\projectitem{Pandas Series and DataFrame --- Learning \& Practice}{https://github.com/ShahidulHaqueShaheeen/Exploring-Data-with-Pandas.git}
+\begin{itemize}
+    \item Explored Pandas Series and DataFrame operations with real-world datasets
+    \item Performed data manipulation, cleaning, and preprocessing tasks
+    \item Conducted exploratory data analysis (EDA) and generated analytical insights
+    \item Applied Pandas functions like GroupBy, Pivot Tables, and Merging datasets
+    \item Used NumPy, Matplotlib, and Seaborn for data visualization and deeper analysis
+\end{itemize}
+
+\vspace{10pt}
+\needspace{6\baselineskip}
+\projectitem{Feature Engineering Project}{https://github.com/ShahidulHaqueShaheeen/Feature_Engineering.git}
+\begin{itemize}
+    \item Explored techniques for Feature Construction and Feature Transformation
+    \item Implemented Pipelines to streamline feature engineering processes
+    \item Applied Principal Component Analysis (PCA) for dimensionality reduction
+    \item Used Pandas, Scikit-learn, and NumPy for feature extraction, transformation, and evaluation
+\end{itemize}
+
+% ---------------- Research Experience ----------------
+\section*{Research Experience}
+
+\needspace{6\baselineskip}
+\projectitem{Undergraduate Research / Thesis --- BRAC University}{https://github.com/ShahidulHaqueShaheeen/Research_Thesis.git}
+\begin{itemize}
+    \item Conducted an undergraduate thesis on Deep Learning (Image Classification) under the supervision of Dr. Jannatun Noor
+    \item Title: \textit{CattleSavior: Towards Implementing an Advanced External Disease Detection System through Deep Learning}
+\end{itemize}
+
+% ---------------- Research Interest ----------------
+\section*{Research Interest}
+\begin{itemize}
+    \item Machine Learning
+    \item Deep Learning
+    \item Image Processing
+    \item Natural Language Processing
+    \item Human Computer Interface
+    \item Generative Artificial Intelligence
+\end{itemize}
+
+% ---------------- References ----------------
+\section*{References}
+
+\begin{tabularx}{\textwidth}{X X}
+\textbf{Jannatun Noor Mukta} & \textbf{Moin Mostakim} \\
+Assistant Professor, CSE Department & Senior Lecturer, CSE Department \\
+BRAC University, Dhaka & BRAC University, Dhaka \\
+Email: jannatun.noor@bracu.ac.bd & Email: mostakim@bracu.ac.bd \\
+\end{tabularx}
+
+\end{document}
